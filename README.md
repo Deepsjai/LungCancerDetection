@@ -127,15 +127,10 @@ _____
 
 # Evaluation
 
-### Supervised Learning
-
 <p align="center">
 Table 1: Summary of results obtained in the supervised binary classification task using two different network architectures. Initial refers to the results obtained by training the network on the initial dataset and augmented refers to the results obtained by training the network on the augmented dataset. The results show a marked improvement in accuracy and recall post augmentation on both network architectures without a significant reduction in precision.
 </p>
 
-### Unsupervised Learning
-
-There are no evaluation methods for VAE since there are no good quantitative metrics that relies on visual inspection. It is still an open research topic. Hence we will rely on the results from supervised learning after data augmentation.
 
 # Results
 
