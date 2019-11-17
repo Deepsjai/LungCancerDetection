@@ -113,23 +113,22 @@ We designed a deep VAE having the architecture described in Figure 5 and sampled
 Fig 3. Architecture of CNN based Variational AutoEncoder.
 </p>
 
+<br>
+<br>
+
 <p align="center">
   <img src="./images/VAE_images.png" width="500" height="500">
 </p>
 <p align="center" style="font-size:10px;">
-Fig 3. Images sampled from VAE.The top two images belong to the benign class while the bottom two are from the malignant class of X-ray scans
+Fig 3. Images sampled from VAE. The top two belong to the benign and bottom two are malignant X-ray scans.
 </p>
+
+_____
 
 # Evaluation
 
 ### Supervised Learning
- | Metrics | Initial | Augmented | Initial | Augmented |
- |---------|---------|-----------|---------|-----------|
- | Accuracy | 68.83 | 71.48 | 70.53 | 73.11  |
- | Precision | 65.30 | 69.31 | 70.50 | 70.12 |
- | Recall | 78.05 | 75.29 | 68.80 | 78.89 |
- | Summary | 71.10 | 72.18 | 69.65 | 74.24 |
- 
+
 <p align="center">
 Table 1: Summary of results obtained in the supervised binary classification task using two different network architectures. Initial refers to the results obtained by training the network on the initial dataset and augmented refers to the results obtained by training the network on the augmented dataset. The results show a marked improvement in accuracy and recall post augmentation on both network architectures without a significant reduction in precision.
 </p>
@@ -140,14 +139,15 @@ There are no evaluation methods for VAE since there are no good quantitative met
 
 # Results
 
-![](./images/image14.png) ![](./images/image18.png)
-<p align="center" style="font-size:16px">
+
+<p align="center">
 Chart 1: Left: The validation accuracy of AlexNet over different epochs for models trained with base data and augmented data. Right: The test accuracy of AlexNet over different epochs for models trained with base data and augmented data. The model trained with the augmented data outperforms the model trained with the base data.
+
 </p>
 
-![](./images/Confusion matrix: Alexnet trained with initial Data.png) ![](./images/Confusion matrix: Alexnet trained with augmented Data.png)
-<p align="center" style="font-size:16px">
-Chart 2: Left: Confusion Matrix of the network trained over base data. Right: Confusion matrix of the network trained with augmented data. The model trained with the augmented data outperforms the model trained with the base data.
+
+<p align="center">
+Chart 2: Left: Confusion Matrix of the network trained over base data. Right:Confusion matrix of the network trained with augmented data. The model trained with the augmented data outperforms the model trained with the base data.
 </p>
 
 ### Average Metrics for both networks: AlexNet and DenseNet
