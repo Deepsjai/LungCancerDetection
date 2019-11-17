@@ -52,9 +52,9 @@ It would be tedious (and maybe near impossible) to hand-design the features that
 
 ### Proposed System Architecture
 
-![](./images/image13.jpg)
+![](./images/image7.jpg)
 
-<p align="center" style="font-size:16px;">
+<p align="center">
 Fig 1. System Architecture: The classifier is trained on the training dataset and the generated data from the Variational AutoEncoders. The model classifies a test X-ray as benign or malignant and highlights the region that contributes most to the classification. 
 </p>
 
@@ -68,33 +68,25 @@ This becomes a particularly relevant addition to a medical diagnostic tool consi
 
 We demonstrate a few applications of Grad-CAM to our problem and showcase its usefulness (and occasional unreliability) in the following examples.
 
-![](./images/image28.png) ![](./images/image11.png)
+![](./images/image3.png) ![](./images/image4.png)
 
-<p align="center" style="font-size:16px;">
+<p align="center">
 Fig 2. An example of the working mechanism of Grad-CAM. This is an image classification task where a deep neural network has predicted the left image to correspond to the ‘elephant’ class, while the right image highlights the precise region of the image that most strongly activated the ‘elephant’ class.
 </p>
 
-![](./images/image16.png) ![](./images/image10.png)
-
-<p align="center" style="font-size:16px;">
+<p align="center">
 Fig 3. On the left is the original lateral chest X-ray image that has been correctly classified as malignant. On the right is the Grad-CAM heatmap that points to the precise region in the X-ray where there’s a clumping of cells that explains the prediction of malignancy. 
 </p>
 
-![](./images/image3.png) ![](./images/image20.png)
-
-<p align="center" style="font-size:16px;">
+<p align="center">
 Fig 4. On the left is the original lateral chest X-ray image that has been correctly classified as malignant. On the right is the Grad-CAM heatmap that points to the precise region in the X-ray where a radiologist ought to be looking at for cues on potential malignancy.
 </p>
 
-![](./images/image19.png) ![](./images/image24.png)
-
-<p align="center" style="font-size:16px;">
+<p align="center">
 Fig 5. Grad-CAM is also useful to remind ourselves that when deep neural networks get predictions right, they don’t always do so for the correct underlying reasons. Here on the left is the original frontal chest X-ray that has been correctly classified as malignant. On the right is the Grad-CAM heatmap that points to seemingly irrelevant regions in the X-ray that are unrelated to potential malignancy.
 </p>
 
-![](./images/image30.png) ![](./images/image4.png)
-
-<p align="center" style="font-size:16px;">
+<p align="center">
 Fig 6. This example points to yet another fallibility of deep neural networks that Grad-CAM brings to light. While the original frontal chest X-ray on the left has been correctly classified as malignant, we see in the heatmap on the right that there are multiple regions of interest, one of which may be the appropriate region of malignancy. Domain experts could use these maps as cues for further manual investigation.
 </p>
 ________
@@ -107,7 +99,7 @@ A Variational Autoencoder (VAE) is one such deep generative model that estimates
 
 
 ![](./images/image5.png)
-<p align="center" style="font-size:16px;">
+<p align="center" style="font-size:10px;">
 Eq 1. Loss function of a Variational Autoencoder
 </p>
 
@@ -117,29 +109,22 @@ We designed a deep VAE having the architecture described in Figure 5 and sampled
 
 
 ![](./images/VAE.png)
-<p align="center" style="font-size:16px;">
-Fig 7. Architecture of CNN based Variational AutoEncoder.
+<p align="center" style="font-size:10px;">
+Fig 3. Architecture of CNN based Variational AutoEncoder.
 </p>
 
-![](./images/image25.png) ![](./images/image6.png)
-![](./images/image26.png) ![](./images/image22.png)
-<p align="center" style="font-size:16px;">
-Fig 8. Images sampled from VAE.The top two images belong to the benign class while the bottom two are from the malignant class of X-ray scans
-
+<p align="center">
+  <img src="./images/VAE_images.png" width="500" height="500">
+</p>
+<p align="center" style="font-size:10px;">
+Fig 3. Images sampled from VAE.The top two images belong to the benign class while the bottom two are from the malignant class of X-ray scans
 </p>
 
 # Evaluation
 
 ### Supervised Learning
 
- | Metrics | Initial | Augmented | Initial | Augmented |
- |---------|---------|-----------|---------|-----------|
- | Accuracy | 68.83 | 71.48 | 70.53 | 73.11  |
- | Precision | 65.30 | 69.31 | 70.50 | 70.12 |
- | Recall | 78.05 | 75.29 | 68.80 | 78.89 |
- | Summary | 71.10 | 72.18 | 69.65 | 74.24 |
-
-<p align="center" style="font-size:16px;">
+<p align="center">
 Table 1: Summary of results obtained in the supervised binary classification task using two different network architectures. Initial refers to the results obtained by training the network on the initial dataset and augmented refers to the results obtained by training the network on the augmented dataset. The results show a marked improvement in accuracy and recall post augmentation on both network architectures without a significant reduction in precision.
 </p>
 
@@ -150,13 +135,13 @@ There are no evaluation methods for VAE since there are no good quantitative met
 # Results
 
 
-<p align="center" style="font-size:16px;">
+<p align="center">
 Chart 1: Left: The validation accuracy of AlexNet over different epochs for models trained with base data and augmented data. Right: The test accuracy of AlexNet over different epochs for models trained with base data and augmented data. The model trained with the augmented data outperforms the model trained with the base data.
 
 </p>
 
 
-<p align="center" style="font-size:16px;">
+<p align="center">
 Chart 2: Left: Confusion Matrix of the network trained over base data. Right:Confusion matrix of the network trained with augmented data. The model trained with the augmented data outperforms the model trained with the base data.
 </p>
 
@@ -182,8 +167,8 @@ _______
 <a name="ref5"></a> 5. Ardila, D., Kiraly, A.P., Bharadwaj, S. et al. End-to-end lung cancer screening with three-dimensional deep learning on low-dose chest computed tomography. Nat Med 25, 954–961 (2019). <br>
 <a name="ref6"></a> 6. Gulshan V, Peng L, Coram M, et al. Development and Validation of a Deep Learning Algorithm for Detection of Diabetic Retinopathy in Retinal Fundus Photographs. JAMA. 2016. <br>
 <a name="ref7"></a> 7. Irvin, Jeremy & Rajpurkar, Pranav & Ko, Michael & Yu, Yifan & Ciurea-Ilcus, Silviana & Chute, Chris & Marklund, Henrik & Haghgoo, Behzad & Ball, Robyn & Shpanskaya, Katie & Seekins, Jayne & Mong, David & Halabi, Safwan & Sandberg, Jesse & Jones, Ricky & Larson, David & Langlotz, Curtis & Patel, Bhavik & Lungren, Matthew & Ng, Andrew. (2019). CheXpert: A Large Chest Radiograph Dataset with Uncertainty Labels and Expert Comparison. 
-<a name="ref8"></a> 8. Xianxu Hou, Linlin Shen, Ke Sun, and Guoping Qiu. Deep feature consistent variational autoencoder. In Applications of Computer Vision (WACV), 2017 IEEE Winter Conference on, pp. 1133–1141. IEEE, 2017.<br>
-<a name="ref9"></a> 9. Javier Jorge, Jesús Vieco, Roberto Paredes, Joan-Andreu Sánchez, and José-Miguel Benedí. Empirical evalua- tion of variational autoencoders for data augmentation.
+<a name="ref8"></a> 8. Xianxu Hou, Linlin Shen, Ke Sun, and Guoping Qiu. Deep feature consistent variational autoencoder. In Applications of Computer Vision (WACV), 2017 IEEE Winter Conference on, pp. 1133–1141. IEEE, 2017.
+<a name="ref9"></a> 9. Javier Jorge, Jesús Vieco, Roberto Paredes, Joan-Andreu Sánchez, and José-Miguel Benedí. Empirical evalua- tion of variational autoencoders for data augmentation.
 
 
 
