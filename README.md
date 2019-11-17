@@ -1,11 +1,35 @@
 # Introduction
 
-Cancer is the second leading cause of death globally and is responsible for an estimated 9.6 million deaths in 2018. Lung cancer is the leading cause of cancer death in the United States with an estimated 160,000 deaths in the past year [[1]](#ref1). Early detection of cancer hence plays a key role in diagnosis which, in turn, improves the long-term survival rates. 
+Cancer is the second leading cause of death globally and was responsible for an estimated 9.6 million deaths in 2018. Lung cancer is the leading cause of cancer death in the United States with an estimated 160,000 deaths in the past year[[1]](#ref1). Early detection of cancer, therefore, plays a key role in its treatment, in turn improving long-term survival rates.
 
-There are several barriers to the early detecting of cancer, such as a global shortage of radiologists. In addition to the shortage, detecting malignant tumors in X-rays can be difficult and challenging even for experienced radiologists. This time-consuming process typically leads to fatigue-based diagnostic errors and discrepancies [[2]](#re2).
+There are several barriers to the early detection of cancer, such as a global shortage of radiologists. In addition to the shortage, detecting malignant tumors in X-rays can be difficult and challenging even for experienced radiologists. This time-consuming process typically leads to fatigue-based diagnostic errors and discrepancies[[2]](#ref2).
 
-Our project focuses on detecting the presence of malignant tumors in chest X-rays. In order to aid radiologists around the world, we propose to exploit supervised and unsupervised Machine Learning algorithms for lung cancer detection. We aim to showcase ‘explainable’ models [[3]](#ref3) that could perform close to human accuracy levels for cancer-detection. We envision our models being used to assist radiologists and scaling cancer detection to overcome the lack of diagnostic bandwidth in this domain. We can also potentially export our models to personal devices, which would allow for easier, cheaper and more accessible cancer detection.  
+Our project focuses on detecting the presence of malignant tumors in chest X-rays. In order to aid radiologists around the world, we propose to exploit supervised and unsupervised Machine Learning algorithms for lung cancer detection. We aim to showcase ‘explainable’ models [[3]](#ref3) that could perform close to human accuracy levels for cancer-detection. We envision our models being used to assist radiologists and scaling cancer detection to overcome the lack of diagnostic bandwidth in this domain. We can also potentially export our models to personal devices, which would allow for easier, cheaper and more accessible cancer detection. 
 
+__________
+
+# Dataset
+
+We used the CheXpert Chest radiograph datase[[4]](#ref4) to build our initial dataset of images. To build our dataset, we sampled data corresponding to the presence of a ‘lung lesion’ which was a label derived from either the presence of “nodule” or “mass” (the two specific indicators of lung cancer). 
+
+The initial (unaugmented) dataset:
+
+#### Train:
+Benign images (Negative class): 6488 images <br>
+Malignant (Positive class): 6287 images
+
+#### Validation:
+Benign images (Negative class): 1500 images <br>
+Malignant (Positive class): 1450 images
+
+#### Test:
+Benign (Negative class): 1500 images <br>
+Malignant (Positive class): 1449 images
+
+
+In the training phase, we treated all images with transformations to augment our data by performing random resized crop and lateral inversions with a 50% probability. 
+
+In addition to the above all images were normalized using the channel-wise mean and standard deviation values computed on the ImageNet dataset. 
 ____
 
 # Supervised Learning
@@ -15,14 +39,16 @@ We use a transfer learning approach to perform supervised binary classification 
 
 ## Reason behind adopting this approach:
 
-It is known that tumors are of different shapes and sizes and can occur at different locations, which makes their detection challenging [[5]](#ref5). In addition to this, deep learning approaches have been showing expert-level performance in medical image interpretation tasks in the recent past (for eg., Diabetic Retinopathy [[6]](#ref6)). This can be attributed to both - availability of large labeled data sets and the ability of deep neural networks to extract complex features from within the image. 
+It is known that tumors are of different shapes and sizes and can occur at different locations, which makes their detection challenging[[5]](#ref5). In addition to this, deep learning approaches have been showing expert-level performance in medical image interpretation tasks in the recent past (for eg., Diabetic Retinopathy[[6]](#ref6)). This can be attributed to both - availability of large labeled data sets and the ability of deep neural networks to extract complex features from within the image. 
 
 It would be tedious (and maybe near impossible) to hand-design the features that one would need to build models for this task. This, in combination with the fact that we were dealing with a dataset containing a significantly smaller amount of images directly points to using a transfer learning approach where we initialize the parameters from a network pre-trained on ImageNet data and modify the final fully connected layer of the pre-trained network to a new fully-connected layer producing 2 responses indicative of the predicted probabilities of the two classes.
 
+
 ## What’s new in our approach:
 
-The overall architecture of feature_extraction + grad_cam visualization + Augmentation via VAEs is new and has not been approached on a medical image dataset to the best of our knowledge. <br>
-If our approach can show improved results, it could mean that we do not necessarily have to collect a large amount of data at all times and would be able to manage with smaller datasets. 
+1. The overall architecture of feature_extraction + grad_cam visualization + data augmentation via VAEs is new and has not been approached on a medical image dataset to the best of our knowledge.
+2. If our approach can show improved results, it could mean that we do not necessarily have to collect a large amount of data at all times and would be able to manage with smaller datasets. 
+
 
 ### Proposed System Architecture
 
@@ -43,15 +69,32 @@ We demonstrate a few applications of Grad-CAM to our problem and showcase its us
 ![](./images/image3.png) ![](./images/image4.png)
 
 <p align="center">
-Fig 2. On the left, the original X-ray image that’s been (correctly) classified as malignant. On the right, the Grad-CAM heatmap that points to the precise region in the X-ray where there’s a clumping of cells that explains the prediction of malignancy. 
+Fig 2. An example of the working mechanism of Grad-CAM. This is an image classification task where a deep neural network has predicted the left image to correspond to the ‘elephant’ class, while the right image highlights the precise region of the image that most strongly activated the ‘elephant’ class.
 </p>
 
+<p align="center">
+Fig 3. On the left is the original lateral chest X-ray image that has been correctly classified as malignant. On the right is the Grad-CAM heatmap that points to the precise region in the X-ray where there’s a clumping of cells that explains the prediction of malignancy. 
+</p>
+
+<p align="center">
+Fig 4. On the left is the original lateral chest X-ray image that has been correctly classified as malignant. On the right is the Grad-CAM heatmap that points to the precise region in the X-ray where a radiologist ought to be looking at for cues on potential malignancy.
+</p>
+
+<p align="center">
+Fig 5. Grad-CAM is also useful to remind ourselves that when deep neural networks get predictions right, they don’t always do so for the correct underlying reasons. Here on the left is the original frontal chest X-ray that has been correctly classified as malignant. On the right is the Grad-CAM heatmap that points to seemingly irrelevant regions in the X-ray that are unrelated to potential malignancy.
+</p>
+
+<p align="center">
+Fig 6. This example points to yet another fallibility of deep neural networks that Grad-CAM brings to light. While the original frontal chest X-ray on the left has been correctly classified as malignant, we see in the heatmap on the right that there are multiple regions of interest, one of which may be the appropriate region of malignancy. Domain experts could use these maps as cues for further manual investigation.
+</p>
 ________
 
 # Unsupervised Learning
-In the clinical setting, it becomes extremely important to train a model that can handle a range of variations in the patient’s X-ray scan. However in the modern-day world with genetic variations and evolution taking place at an ever-growing rate, it becomes nearly impossible to obtain all possible variations of input. In addition to this one of the biggest challenges in the medical field is the lack of sufficient image data, which are laborious and costly to obtain. Data augmentation is one such technique that is leveraged to increase the variability of the dataset, thus reducing the risk of overfitting. Conventional transformation methods (eg: flip, rotation) can be used to augment our training corpus, but their outputs are highly dependent on the original data. Hence we propose to make use of an unsupervised technique of generating new samples having similar properties as that of the dataset. 
 
-The Variational Autoencoder (VAE) is one such generative model that estimates the probability density function of the training dataset. VAE is an architecture comprising of an encoder and a decoder, which is trained to minimise the reconstruction error between the encoded-decoded data and the initial data. The encoder projects each input datapoint onto a latent space that follows a normal distribution. Thus it converts the input into a d-dimensional latent vector that can be sampled with mean  and standard deviation  through reparametrization. The decoder then decodes these latent representations and reconstructs the input data. The loss function of the variational autoencoder is the sum of the reconstruction loss and the regularizer.
+In the clinical setting, it becomes extremely important to train a model that can handle the entire range of variations in the patient’s X-ray scan. However, it  becomes nearly impossible to obtain all possible variations of input. In addition to this, one of the biggest challenges in the medical field is the lack of sufficient image data, which are laborious and costly to obtain. With data privacy being especially important in the medical domain, it is difficult to obtain the sufficient amount of data that is required for building robust models. Therefore, data augmentation emerges as an essential technique that could be leveraged to increase the variability of the dataset, thus reducing the risk of overfitting. Conventional transformation methods (eg: flip, rotation) can be used to augment our training corpus, but their outputs are highly dependent on the original data. Hence, we propose to make use of an unsupervised technique of generating new samples having similar properties as that of the training dataset. 
+
+A Variational Autoencoder (VAE) is one such deep generative model that estimates the probability density function of the dataset. VAE is an architecture which comprises of an encoder and a decoder, and is trained to minimise the reconstruction error between the encoded-decoded data and the initial data. The encoder projects each input datapoint onto a latent space that follows a normal distribution. Thus it converts the input into a d-dimensional latent vector that can be sampled with mean  and standard deviation  through reparametrization. The decoder then decodes these latent representations and reconstructs the input data. The loss function of the variational autoencoder is the sum of the reconstruction loss and the regularizer.
+
 
 ![](./images/image5.png)
 <p align="center" style="font-size:10px;">
@@ -60,38 +103,14 @@ Eq 1. Loss function of a Variational Autoencoder
 
 The first term is the reconstruction loss, or the expected negative log-likelihood of the i-th datapoint. The expectation is taken with respect to the encoder’s distribution over the representations. This term encourages the decoder to learn to reconstruct the data. The second term is a regularizer which in our case is the Kullback-Leibler divergence between the encoder’s distribution and the standard Gaussian distribution.
 
-We designed a deep neural network VAE having the below architecture and sampled 1000 images for each category ( benign and malignant ). These sampled images were added to the training dataset and our supervised models were re-tested on the newly augmented training corpus.
+We designed a deep VAE having the architecture described in Figure 5 and sampled a thousand images for each category ( benign and malignant ). These sampled images were added to the training dataset and our supervised models were re-tested on the newly augmented training corpus.
+
 
 ![](./images/VAE.png)
 <p align="center" style="font-size:10px;">
 Fig 3. Architecture of CNN based Variational AutoEncoder.
 </p>
-__________
 
-# Dataset
-
-We used the small CheXpert Chest radiograph dataset [[7]](#ref7) to build our initial dataset of images. To build our dataset, we sampled data corresponding to the presence of a ‘lung lesion’ which was a label derived from either the presence of “nodule” or “mass” (the two specific indicators of lung cancer). 
-
-The initial (unaugmented) dataset:
-
-#### Train:
-Benign images (Negative class): 6488 images <br>
-Malignant (Positive class): 6287 images
-
-#### Validation:
-Benign images (Negative class): 1500 images <br>
-Malignant (Positive class): 1450 images
-
-#### Test:
-Benign (Negative class): 1500 images <br>
-Malignant (Positive class): 1449 images
-
-
-In the training phase, we treated all images with a transformations to augment our data by performing random resized crop and lateral inversions with a 50% probability. 
-
-In addition to the above all images were normalized using the channel-wise mean and standard deviation values computed on the ImageNet dataset. 
-
-___________
 
 # Results
 
