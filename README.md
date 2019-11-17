@@ -108,7 +108,7 @@ The first term is the reconstruction loss, or the expected negative log-likeliho
 We designed a deep VAE having the architecture described in Figure 5 and sampled a thousand images for each category ( benign and malignant ). These sampled images were added to the training dataset and our supervised models were re-tested on the newly augmented training corpus.
 
 
-![](./images/VAE.png)
+![](./images/VAE2.png)
 <p align="center" style="font-size:10px;">
 Fig 3. Architecture of CNN based Variational AutoEncoder.
 </p>
