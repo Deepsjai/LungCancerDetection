@@ -60,7 +60,7 @@ Eq 1. Loss function of a Variational Autoencoder
 
 The first term is the reconstruction loss, or the expected negative log-likelihood of the i-th datapoint. The expectation is taken with respect to the encoder’s distribution over the representations. This term encourages the decoder to learn to reconstruct the data. The second term is a regularizer which in our case is the Kullback-Leibler divergence between the encoder’s distribution and the standard Gaussian distribution.
 
-We carried out our experiments on two VAE architectures : a fully connected linear VAE and a deep neural network VAE having the following architectures.
+We designed a deep neural network VAE having the below architecture and sampled 1000 images for each category ( benign and malignant ). These sampled images were added to the training dataset and our supervised models were re-tested on the newly augmented training corpus.
 
 Fig 3. Architecture of the Variational AutoEncoders used.
 
