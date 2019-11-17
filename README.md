@@ -149,11 +149,33 @@ Table 1: Summary of results obtained in the supervised binary classification tas
 Chart 1: Left: The validation accuracy of AlexNet over different epochs for models trained with base data and augmented data. Right: The test accuracy of AlexNet over different epochs for models trained with base data and augmented data. The model trained with the augmented data outperforms the model trained with the base data. 
 </p>
 
-<p align="center">
-Chart 2: Left: Confusion Matrix of the network trained over base data. Right:Confusion matrix of the network trained with augmented data. The model trained with the augmented data outperforms the model trained with the base data.
-</p>
+![](./images/Confusion_matrix_Alexnet_initial_data.png)
+Confusion matrix of the AlexNet model trained using the initial data
 
-### Average Metrics for both networks: AlexNet and DenseNet
+![](./images/Confusion_matrix_Alexnet_augmented_data.png)
+Confusion matrix of the AlexNet model trained using VAE augmented data. The model trained with the augmented data outperforms the model trained with the base data.
+
+![](./images/Confusion_matrix_densenet_initial_data.png)
+Confusion matrix of the DenseNet model trained using the initial data
+
+![](./images/Confusion_matrix_densenet_augmented_data.png)
+Confusion matrix of the DenseNet model trained using the VAE augmented data. The model trained with the augmented data outperforms the model trained with the base data.
+
+
+### Performance Metrics for both networks: AlexNet and DenseNet
+
+
+![](./images/image21)
+Accuracy
+
+![](./images/image15)
+Recall
+
+![](./images/image8)
+Precision
+
+![](./images/image27)
+F1 Score
 
 _____________
 
