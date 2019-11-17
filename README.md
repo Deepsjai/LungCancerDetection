@@ -134,12 +134,15 @@ Table 1: Summary of results obtained in the supervised binary classification tas
 
 # Results
 
-
-<p align="center">
-Chart 1: Left: The validation accuracy of AlexNet over different epochs for models trained with base data and augmented data. Right: The test accuracy of AlexNet over different epochs for models trained with base data and augmented data. The model trained with the augmented data outperforms the model trained with the base data.
-
+<p align="center" style="font-size:16px;">
+<img src = "/images/image14.png"/>
+The validation accuracy of AlexNet over different epochs for models trained with base data and augmented data. 
 </p>
 
+<p align="center" style="font-size:16px;">
+<img src = "/images/image18.png"/>
+The test accuracy of AlexNet over different epochs for models trained with base data and augmented data. The model trained with the augmented data outperforms the model trained with the base data. 
+</p>
 
 <p align="center">
 Chart 2: Left: Confusion Matrix of the network trained over base data. Right:Confusion matrix of the network trained with augmented data. The model trained with the augmented data outperforms the model trained with the base data.
