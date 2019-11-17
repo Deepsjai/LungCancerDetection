@@ -64,7 +64,7 @@ We designed a deep neural network VAE having the below architecture and sampled 
 
 ![](./images/VAE.png)
 <p align="center" style="font-size:10px;">
-Fig 3. Architecture of the Variational AutoEncoders used.
+Fig 3. Architecture of CNN based Variational AutoEncoder.
 </p>
 __________
 
