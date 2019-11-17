@@ -110,7 +110,7 @@ We designed a deep VAE having the architecture described in Figure 5 and sampled
 
 ![](./images/VAE2.png)
 <p align="center" style="font-size:10px;">
-Fig 3. Architecture of CNN based Variational AutoEncoder.
+Fig 7. Architecture of CNN based Variational AutoEncoder.
 </p>
 
 <br>
@@ -120,7 +120,7 @@ Fig 3. Architecture of CNN based Variational AutoEncoder.
   <img src="./images/VAE_images.png" width="500" height="500">
 </p>
 <p align="center" style="font-size:10px;">
-Fig 3. Images sampled from VAE. The top two belong to the benign and bottom two are malignant X-ray scans.
+Fig 8. Images sampled from VAE. The top two belong to the benign and bottom two are malignant X-ray scans.
 </p>
 
 _____
