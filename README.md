@@ -6,13 +6,7 @@ There are several barriers to the early detecting of cancer, such as a global sh
 
 Our project focuses on detecting the presence of malignant tumors in chest X-rays. In order to aid radiologists around the world, we propose to exploit supervised and unsupervised Machine Learning algorithms for lung cancer detection. We aim to showcase ‘explainable’ models [[3]](#ref3) that could perform close to human accuracy levels for cancer-detection. We envision our models being used to assist radiologists and scaling cancer detection to overcome the lack of diagnostic bandwidth in this domain. We can also potentially export our models to personal devices, which would allow for easier, cheaper and more accessible cancer detection.  
 
-### Proposed System Architecture
-
-![](./images/image7.jpg)
-
-Fig 1. System Architecture: The classifier is trained on the training dataset and the generated data from the Variational AutoEncoders. The model classifies a test X-ray as benign or malignant and highlights the region that contributes most to the classification. 
-
-_____
+____
 
 # Supervised Learning
 
@@ -30,6 +24,13 @@ It would be tedious (and maybe near impossible) to hand-design the features that
 The overall architecture of feature_extraction + grad_cam visualization + Augmentation via VAEs is new and has not been approached on a medical image dataset to the best of our knowledge. \
 If our approach can show improved results, it could mean that we do not necessarily have to collect a large amount of data at all times and would be able to manage with smaller datasets. 
 
+### Proposed System Architecture
+
+![](./images/image7.jpg)
+
+Fig 1. System Architecture: The classifier is trained on the training dataset and the generated data from the Variational AutoEncoders. The model classifies a test X-ray as benign or malignant and highlights the region that contributes most to the classification. 
+
+_____
 
 # Grad CAM
 
@@ -42,6 +43,8 @@ We demonstrate a few applications of Grad-CAM to our problem and showcase its us
 ![](./images/image3.png) ![](./images/image4.png)
 
 Fig 2. On the left, the original X-ray image that’s been (correctly) classified as malignant. On the right, the Grad-CAM heatmap that points to the precise region in the X-ray where there’s a clumping of cells that explains the prediction of malignancy. 
+
+________
 
 # Unsupervised Learning
 In the clinical setting, it becomes extremely important to train a model that can handle a range of variations in the patient’s X-ray scan. However in the modern-day world with genetic variations and evolution taking place at an ever-growing rate, it becomes nearly impossible to obtain all possible variations of input. In addition to this one of the biggest challenges in the medical field is the lack of sufficient image data, which are laborious and costly to obtain. Data augmentation is one such technique that is leveraged to increase the variability of the dataset, thus reducing the risk of overfitting. Conventional transformation methods (eg: flip, rotation) can be used to augment our training corpus, but their outputs are highly dependent on the original data. Hence we propose to make use of an unsupervised technique of generating new samples having similar properties as that of the dataset. 
@@ -58,6 +61,8 @@ We carried out our experiments on two VAE architectures : a fully connected line
 
 ![](./images/image5.png)
 Fig 3. Architecture of the Variational AutoEncoders used.
+
+__________
 
 # Dataset
 
@@ -82,9 +87,11 @@ In the training phase, we treated all images with a transformations to augment o
 
 In addition to the above all images were normalized using the channel-wise mean and standard deviation values computed on the ImageNet dataset. 
 
+___________
 
 # Results
 
+_______
 
 # References
 
