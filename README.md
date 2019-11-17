@@ -140,15 +140,14 @@ There are no evaluation methods for VAE since there are no good quantitative met
 
 # Results
 
-
-<p align="center">
+![](./images/image14.png) ![](./images/image18.png)
+<p align="center" style="font-size:16px">
 Chart 1: Left: The validation accuracy of AlexNet over different epochs for models trained with base data and augmented data. Right: The test accuracy of AlexNet over different epochs for models trained with base data and augmented data. The model trained with the augmented data outperforms the model trained with the base data.
-
 </p>
 
-
-<p align="center">
-Chart 2: Left: Confusion Matrix of the network trained over base data. Right:Confusion matrix of the network trained with augmented data. The model trained with the augmented data outperforms the model trained with the base data.
+![](./images/Confusion matrix: Alexnet trained with initial Data.png) ![](./images/Confusion matrix: Alexnet trained with augmented Data.png)
+<p align="center" style="font-size:16px">
+Chart 2: Left: Confusion Matrix of the network trained over base data. Right: Confusion matrix of the network trained with augmented data. The model trained with the augmented data outperforms the model trained with the base data.
 </p>
 
 ### Average Metrics for both networks: AlexNet and DenseNet
