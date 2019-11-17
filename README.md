@@ -52,7 +52,7 @@ In the clinical setting, it becomes extremely important to train a model that ca
 The Variational Autoencoder (VAE) is one such generative model that estimates the probability density function of the training dataset. VAE is an architecture comprising of an encoder and a decoder, which is trained to minimise the reconstruction error between the encoded-decoded data and the initial data. The encoder projects each input datapoint onto a latent space that follows a normal distribution. Thus it converts the input into a d-dimensional latent vector that can be sampled with mean  and standard deviation  through reparametrization. The decoder then decodes these latent representations and reconstructs the input data. The loss function of the variational autoencoder is the sum of the reconstruction loss and the regularizer.
 
 ![](./images/image5.png)
-<p align="center" style="font-size:10px">
+<p align="center" style="font-size:5px">
 Eq 1. Loss function of a Variational Autoencoder
 </p>
 
