@@ -42,7 +42,9 @@ We demonstrate a few applications of Grad-CAM to our problem and showcase its us
 
 ![](./images/image3.png) ![](./images/image4.png)
 
+<p align="center">
 Fig 2. On the left, the original X-ray image that’s been (correctly) classified as malignant. On the right, the Grad-CAM heatmap that points to the precise region in the X-ray where there’s a clumping of cells that explains the prediction of malignancy. 
+</p>
 
 ________
 
@@ -52,7 +54,7 @@ In the clinical setting, it becomes extremely important to train a model that ca
 The Variational Autoencoder (VAE) is one such generative model that estimates the probability density function of the training dataset. VAE is an architecture comprising of an encoder and a decoder, which is trained to minimise the reconstruction error between the encoded-decoded data and the initial data. The encoder projects each input datapoint onto a latent space that follows a normal distribution. Thus it converts the input into a d-dimensional latent vector that can be sampled with mean  and standard deviation  through reparametrization. The decoder then decodes these latent representations and reconstructs the input data. The loss function of the variational autoencoder is the sum of the reconstruction loss and the regularizer.
 
 ![](./images/image5.png)
-<p align="center" style="font-size:50px;">
+<p align="center" style="font-size:10px;">
 Eq 1. Loss function of a Variational Autoencoder
 </p>
 
