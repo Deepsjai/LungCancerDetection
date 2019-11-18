@@ -30,8 +30,6 @@ Malignant (Positive class): 1449 images
 In the training phase, we treated all images with transformations to augment our data by performing random resized crop and lateral inversions with a 50% probability. 
 
 In addition to the above all images were normalized using the channel-wise mean and standard deviation values computed on the ImageNet dataset. 
-
-
 ____
 
 # Supervised Learning
@@ -88,13 +86,13 @@ Fig 3. On the left is the original lateral chest X-ray image that has been corre
 Fig 4. On the left is the original lateral chest X-ray image that has been correctly classified as malignant. On the right is the Grad-CAM heatmap that points to the precise region in the X-ray where a radiologist ought to be looking at for cues on potential malignancy.
 </p>
 
-![](./images/image19.png) ![](./images/image24.png)
+![](./images/image19.png=500X) ![](./images/image24.png=500X)
 
 <p align="center" style="font-size:16px">
 Fig 5. Grad-CAM is also useful to remind ourselves that when deep neural networks get predictions right, they don’t always do so for the correct underlying reasons. Here on the left is the original frontal chest X-ray that has been correctly classified as malignant. On the right is the Grad-CAM heatmap that points to seemingly irrelevant regions in the X-ray that are unrelated to potential malignancy.
 </p>
 
-![](./images/image30.png) ![](./images/image4.png)
+![](./images/image30.png=500X) ![](./images/image4.png=500X)
 
 <p align="center" style="font-size:16px">
 Fig 6. This example points to yet another fallibility of deep neural networks that Grad-CAM brings to light. While the original frontal chest X-ray on the left has been correctly classified as malignant, we see in the heatmap on the right that there are multiple regions of interest, one of which may be the appropriate region of malignancy. Domain experts could use these maps as cues for further manual investigation.
@@ -136,49 +134,6 @@ Fig 8. Images sampled from VAE. The top two belong to the benign and bottom two 
 _____
 
 # Evaluation
-
-<table class="rich-diff-level-zero"> <tbody class="rich-diff-level-one">
-<tr>
-  <th></th>    
-  <th colspan="2"> AlexNet </th>
-  <th colspan="2"> DenseNet </th>
-</tr><tr style="text-align:center"> 
-  <th  style="width: 150px;">Metric</th>
-  <th style="width: 150px;">Initial</th>
-  <th  style="width: 150px;">Augmented</th>
-<th style="width: 150px;"> Initial</th>
-<th style="width: 150px;"> Augmented </th> </tr> 
-<tr style="text-align:center"> 
-<th>Accuracy</th>
-<td>68.83</td>
-<td>71.48</td>
-<td>70.53</td>
-<td>73.11</td>
-</tr>
-<tr style="text-align:center"> 
-<th>Precision</th>
-<td style="
-">65.30</td>
-<td>69.31</td>
-<td>70.50</td>
-<td>70.12</td>
-</tr>
-<tr style="text-align:center"> 
-<th>Recall</th>
-<td>78.05</td>
-<td>75.29</td>
-<td>68.80</td>
-<td>78.89</td>
-</tr>
-<tr style="text-align:center"> 
-<th style="
-    align: center;
-">F1-Score</th>
-<td>71.10</td>
-<td>72.18</td>
-<td>69.65</td>
-<td>74.24</td>
-</tr>      </tbody> </table>
 
 <p align="center">
 Table 1: Summary of results obtained in the supervised binary classification task using two different network architectures. Initial refers to the results obtained by training the network on the initial dataset and augmented refers to the results obtained by training the network on the augmented dataset. The results show a marked improvement in accuracy and recall post augmentation on both network architectures without a significant reduction in precision.
@@ -249,7 +204,6 @@ Precision
 </p>
 
 _____________
-
 
 
 # Conclusion
