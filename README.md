@@ -141,21 +141,20 @@ _____
   <th></th>    
   <th colspan="2"> AlexNet </th>
   <th colspan="2"> DenseNet </th>
-</tr><tr> 
+</tr><tr style="text-align: center;"> 
  <th style="width: 150px;">Metric</th>
  <th  style="width: 150px;">Initial</th>
  <th style="width: 150px;">Augmented</th>
 <th style="width: 150px;"> Initial</th>
 <th  style="width: 150px;"> Augmented </th> </tr> 
-<tr>
+<tr style="text-align: center;">
 <th>Accuracy</th>
 <td>68.83</td>
 <td>71.48</td>
 <td>70.53</td>
 <td>73.11</td>
 </tr>
-<tr style="
-">
+<tr style="text-align: center;">
 <th>Precision</th>
 <td style="
 ">65.30</td>
@@ -163,14 +162,14 @@ _____
 <td>70.50</td>
 <td>70.12</td>
 </tr>
-<tr>
+<tr style="text-align: center;">
 <th>Recall</th>
 <td>78.05</td>
 <td>75.29</td>
 <td>68.80</td>
 <td>78.89</td>
 </tr>
-<tr>
+<tr style="text-align: center;">
 <th style="
     align: center;
 ">Summary</th>
