@@ -254,22 +254,31 @@ _____________
 In this project, we developed a machine learning solution to address the requirement of clinical diagnostic support in oncology by building supervised and unsupervised algorithms for cancer detection. From a supervised learning perspective, we demonstrated the effectiveness of transfer learning by using pre-trained convolutional classifiers and fine-tuning them to achieve reasonably good results in our complex domain. We showcased ‘explainable’ models that could reason about their predictions and reduce ambiguity. We also presented a way to overcome inherent data accessibility limitations in the medical field and avoid overfitting by implementing a data augmentation technique using variational autoencoders, resulting in a clear increase in accuracy, thus tightly entangling the supervised and unsupervised components of our solution. We view this as a comprehensive solution that tackles the multiple challenges of data limitations, interpretability and accuracy that are integral to algorithmic successes in the medical domain, and foresee strong potential for its widespread deployment in production, especially on embedded devices equipped with cameras that could provide instant assistance to radiologists around the world.
 
 
-
 _______
 
 # References
 
-<a name="ref1"></a> 1. Rajpurkar, P., Irvin, J., Zhu, K., Yang, B., Mehta, H., Duan, T. et.al., M. P. (2017). Chexnet: Radiologist-level pneumonia detection on chest x-rays with deep learning. <br>
-<a name="ref2"></a> 2. Yongsik Sim,  Myung Jin Chung et al. Deep Convolutional Neural Network–based Software Improves Radiologist Detection of Malignant Lung Nodules on Chest Radiographs, Radiology, 2019. <br>
-<a name="ref3"></a> 3. R. R. Selvaraju, M. Cogswell, A. Das, R. Vedantam, D. Parikh and D. Batra, "Grad-CAM: Visual Explanations from Deep Networks via Gradient-Based Localization," 2017 IEEE International Conference on Computer Vision (ICCV), Venice, 2017, pp. 618-626. <br>
+<a name="ref1"></a> 1. Rajpurkar, P., Irvin, J., Zhu, K., Yang, B., Mehta, H., Duan, T. et.al., M. P. (2017). Chexnet: Radiologist-level pneumonia detection on chest x-rays with deep learning. <br><br>
+<a name="ref2"></a> 2. Yongsik Sim,  Myung Jin Chung et al. Deep Convolutional Neural Network–based Software Improves Radiologist Detection of Malignant Lung Nodules on Chest Radiographs, Radiology, 2019. <br><br>
+<a name="ref3"></a> 3. R. R. Selvaraju, M. Cogswell, A. Das, R. Vedantam, D. Parikh and D. Batra, "Grad-CAM: Visual Explanations from Deep Networks via Gradient-Based Localization," 2017 IEEE International Conference on Computer Vision (ICCV), Venice, 2017, pp. 618-626. <br><br>
 <a name="ref4"></a> 4. Kingma P, Welling M., An Introduction to Variational Autoencoders, arXiv:1906.02691. <br>
-<a name="ref5"></a> 5. Ardila, D., Kiraly, A.P., Bharadwaj, S. et al. End-to-end lung cancer screening with three-dimensional deep learning on low-dose chest computed tomography. Nat Med 25, 954–961 (2019). <br>
-<a name="ref6"></a> 6. Gulshan V, Peng L, Coram M, et al. Development and Validation of a Deep Learning Algorithm for Detection of Diabetic Retinopathy in Retinal Fundus Photographs. JAMA. 2016. <br>
-<a name="ref7"></a> 7. Irvin, Jeremy & Rajpurkar, Pranav & Ko, Michael & Yu, Yifan & Ciurea-Ilcus, Silviana & Chute, Chris & Marklund, Henrik & Haghgoo, Behzad & Ball, Robyn & Shpanskaya, Katie & Seekins, Jayne & Mong, David & Halabi, Safwan & Sandberg, Jesse & Jones, Ricky & Larson, David & Langlotz, Curtis & Patel, Bhavik & Lungren, Matthew & Ng, Andrew. (2019). CheXpert: A Large Chest Radiograph Dataset with Uncertainty Labels and Expert Comparison. 
-<a name="ref8"></a> 8. Xianxu Hou, Linlin Shen, Ke Sun, and Guoping Qiu. Deep feature consistent variational autoencoder. In Applications of Computer Vision (WACV), 2017 IEEE Winter Conference on, pp. 1133–1141. IEEE, 2017.<br>
-<a name="ref9"></a> 9. Javier Jorge, Jesús Vieco, Roberto Paredes, Joan-Andreu Sánchez, and José-Miguel Benedí. Empirical evalua- tion of variational autoencoders for data augmentation.
+<a name="ref5"></a> 5. Ardila, D., Kiraly, A.P., Bharadwaj, S. et al. End-to-end lung cancer screening with three-dimensional deep learning on low-dose chest computed tomography. Nat Med 25, 954–961 (2019). <br><br>
+<a name="ref6"></a> 6. Gulshan V, Peng L, Coram M, et al. Development and Validation of a Deep Learning Algorithm for Detection of Diabetic Retinopathy in Retinal Fundus Photographs. JAMA. 2016. <br><br>
+<a name="ref7"></a> 7. Irvin, Jeremy & Rajpurkar, Pranav & Ko, Michael & Yu, Yifan & Ciurea-Ilcus, Silviana & Chute, Chris & Marklund, Henrik & Haghgoo, Behzad & Ball, Robyn & Shpanskaya, Katie & Seekins, Jayne & Mong, David & Halabi, Safwan & Sandberg, Jesse & Jones, Ricky & Larson, David & Langlotz, Curtis & Patel, Bhavik & Lungren, Matthew & Ng, Andrew. (2019). CheXpert: A Large Chest Radiograph Dataset with Uncertainty Labels and Expert Comparison. <br><br>
+<a name="ref8"></a> 8. Xianxu Hou, Linlin Shen, Ke Sun, and Guoping Qiu. Deep feature consistent variational autoencoder. In Applications of Computer Vision (WACV), 2017 IEEE Winter Conference on, pp. 1133–1141. IEEE, 2017. <br><br>
+<a name="ref9"></a> 9. Javier Jorge, Jesús Vieco, Roberto Paredes, Joan-Andreu Sánchez, and José-Miguel Benedí. Empirical evalua- tion of variational autoencoders for data augmentation. <br><br>
 
 
+____________
+
+# Contributors
 
 
+1. Conceptualization of the project's architecture and details : Equal contribution from all. 
+2. Literature survey : Equal contribution from all. 
+3. Supervised learning : Shalini and Sreehari. 
+4. Unsupervised learning : Shreya and Arvind. 
+5. Grad-CAM : Sameer.
+6. Report writing and editing : Equal contribution from all.
+7. GitHub page maintained by : Shalini.
 
