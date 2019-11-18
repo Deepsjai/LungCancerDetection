@@ -141,22 +141,13 @@ _____
   <th></th>    
   <th colspan="2"> AlexNet </th>
   <th colspan="2"> DenseNet </th>
-</tr><tr> <th style="
-    width: 150px;
-">Metric</th> <th style="
-    width: 150px;
-">Initial</th> <th style="
-    width: 150px;
-">Augmented</th>
-<th style="
-    width: 150px;
-"> Initial</th>
-<th style="
-    width: 150px;
-"> Augmented </th> </tr> 
-<tr style="
-    align-content: center;
-">
+</tr><tr> 
+ <th style="width: 150px;">Metric</th>
+ <th  style="width: 150px;">Initial</th>
+ <th style="width: 150px;">Augmented</th>
+<th style="width: 150px;"> Initial</th>
+<th  style="width: 150px;"> Augmented </th> </tr> 
+<tr>
 <th>Accuracy</th>
 <td>68.83</td>
 <td>71.48</td>
