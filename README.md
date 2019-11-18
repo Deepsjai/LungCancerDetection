@@ -150,31 +150,40 @@ Chart 1: Left: The validation accuracy of AlexNet over different epochs for mode
 </p>
 
 ![](./images/Confusion_matrix_Alexnet_initial_data.png)
+
 Confusion matrix of the AlexNet model trained using the initial data
 
 ![](./images/Confusion_matrix_Alexnet_augmented_data.png)
+
+
 Confusion matrix of the AlexNet model trained using VAE augmented data. The model trained with the augmented data outperforms the model trained with the base data.
 
 ![](./images/Confusion_matrix_densenet_initial_data.png)
+
 Confusion matrix of the DenseNet model trained using the initial data
 
 ![](./images/Confusion_matrix_densenet_augmented_data.png)
+
 Confusion matrix of the DenseNet model trained using the VAE augmented data. The model trained with the augmented data outperforms the model trained with the base data.
 
 
 ### Performance Metrics for both networks: AlexNet and DenseNet
 
 
-![](./images/image21)
+![](./images/image21.png)
+
 Accuracy
 
-![](./images/image15)
+![](./images/image15.png)
+
 Recall
 
-![](./images/image8)
+![](./images/image8.png)
+
 Precision
 
-![](./images/image27)
+![](./images/image27.png)
+
 F1 Score
 
 _____________
