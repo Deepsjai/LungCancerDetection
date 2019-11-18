@@ -109,6 +109,7 @@ Fig 5. Grad-CAM is also useful to remind ourselves that when deep neural network
 <p align="center" style="font-size:16px">
 Fig 6. This example points to yet another fallibility of deep neural networks that Grad-CAM brings to light. While the original frontal chest X-ray on the left has been correctly classified as malignant, we see in the heatmap on the right that there are multiple regions of interest, one of which may be the appropriate region of malignancy. Domain experts could use these maps as cues for further manual investigation.
 </p>
+
 ________
 
 # Unsupervised Learning
