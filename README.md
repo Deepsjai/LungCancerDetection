@@ -176,7 +176,8 @@ Confusion matrix of the DenseNet model trained using the initial data  |  Confus
 
 <!-- ![](./images/image21.png) -->
 <p align="center" style="font-size:16px;">
-  <img src = "./images/image21.png" /><br>
+<img src = "./images/image21.png" />
+  <br>
 Accuracy
 </p>
 
@@ -197,8 +198,9 @@ Precision
 
 <!-- ![](./images/image27.png) -->
 <p align="center" style="font-size:16px;">
+
   <img src = "./images/image27.png" /><br>
-F1 Score
+    F1 Score
 </p>
 
 _____________
