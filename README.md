@@ -86,13 +86,13 @@ Fig 3. On the left is the original lateral chest X-ray image that has been corre
 Fig 4. On the left is the original lateral chest X-ray image that has been correctly classified as malignant. On the right is the Grad-CAM heatmap that points to the precise region in the X-ray where a radiologist ought to be looking at for cues on potential malignancy.
 </p>
 
-![](./images/image19.png=500X) ![](./images/image24.png=500X)
+![](./images/image19.png) ![](./images/image24.png)
 
 <p align="center" style="font-size:16px">
 Fig 5. Grad-CAM is also useful to remind ourselves that when deep neural networks get predictions right, they don’t always do so for the correct underlying reasons. Here on the left is the original frontal chest X-ray that has been correctly classified as malignant. On the right is the Grad-CAM heatmap that points to seemingly irrelevant regions in the X-ray that are unrelated to potential malignancy.
 </p>
 
-![](./images/image30.png=500X) ![](./images/image4.png=500X)
+![](./images/image30.png) ![](./images/image4.png)
 
 <p align="center" style="font-size:16px">
 Fig 6. This example points to yet another fallibility of deep neural networks that Grad-CAM brings to light. While the original frontal chest X-ray on the left has been correctly classified as malignant, we see in the heatmap on the right that there are multiple regions of interest, one of which may be the appropriate region of malignancy. Domain experts could use these maps as cues for further manual investigation.
