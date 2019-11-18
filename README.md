@@ -196,6 +196,8 @@ The validation accuracy of AlexNet over different epochs for models trained with
 The model trained with the augmented data outperforms the model trained with the only the initial data. 
 </p>
 
+
+
 ![](./images/Confusion_matrix_Alexnet_initial_data.png)         |  ![](./images/Confusion_matrix_Alexnet_augmented_data.png)
 :-------------------------:|:-------------------------:
 Confusion matrix of the AlexNet model trained using the initial data  |  Confusion matrix of the AlexNet model trained using VAE augmented data. 
@@ -205,9 +207,11 @@ The alexnet model trained with the augmented data outperforms the model trained 
 </p>
 
 
+
 ![](./images/Confusion_matrix_densenet_initial_data.png)         |  ![](./images/Confusion_matrix_densenet_augmented_data.png)
 :-------------------------:|:-------------------------:
 Confusion matrix of the DenseNet model trained using the initial data  |  Confusion matrix of the DenseNet model trained using the VAE augmented data.
+
 
 <p align="center" style="font-size:16px;">
  The densenet model trained with the augmented data outperforms the model trained with only the initial data.
@@ -215,26 +219,33 @@ Confusion matrix of the DenseNet model trained using the initial data  |  Confus
 
 ### Performance Metrics for both networks: AlexNet and DenseNet
 
-
-![](./images/image21.png)
+<!-- ![](./images/image21.png) -->
 <p align="center" style="font-size:16px;">
+  <img src = "./images/image21.png" /><br>
 Accuracy
 </p>
 
-![](./images/image15.png)
+
+<!-- ![](./images/image15.png) -->
 <p align="center" style="font-size:16px;">
+  <img src = "./images/image15.png" /><br>
 Recall
 </p>
 
-![](./images/image8.png)
+
+<!-- ![](./images/image8.png) -->
 <p align="center" style="font-size:16px;">
+  <img src = "./images/image8.png" /><br>
 Precision
 </p>
 
-![](./images/image27.png)
+
+<!-- ![](./images/image27.png) -->
 <p align="center" style="font-size:16px;">
+  <img src = "./images/image27.png" /><br>
 F1 Score
 </p>
+
 _____________
 
 
