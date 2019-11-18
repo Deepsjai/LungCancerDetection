@@ -136,12 +136,58 @@ _____
 
 # Evaluation
 
-| Metrics | Initial | Augmented | Initial | Augmented |
- |---------|---------|-----------|---------|-----------|
- | Accuracy | 68.83 | 71.48 | 70.53 | 73.11  |
- | Precision | 65.30 | 69.31 | 70.50 | 70.12 |
- | Recall | 78.05 | 75.29 | 68.80 | 78.89 |
- | Summary | 71.10 | 72.18 | 69.65 | 74.24 |
+ <table class="rich-diff-level-zero"> <tbody class="rich-diff-level-one">
+<tr>
+  <th></th>    
+  <th colspan="2"> AlexNet </th>
+  <th colspan="2"> DenseNet </th>
+</tr><tr> <th style="
+    width: 150px;
+">Metric</th> <th style="
+    width: 150px;
+">Initial</th> <th style="
+    width: 150px;
+">Augmented</th>
+<th style="
+    width: 150px;
+"> Initial</th>
+<th style="
+    width: 150px;
+"> Augmented </th> </tr> 
+<tr style="
+    align-content: center;
+">
+<th>Accuracy</th>
+<td>68.83</td>
+<td>71.48</td>
+<td>70.53</td>
+<td>73.11</td>
+</tr>
+<tr style="
+">
+<th>Precision</th>
+<td style="
+">65.30</td>
+<td>69.31</td>
+<td>70.50</td>
+<td>70.12</td>
+</tr>
+<tr>
+<th>Recall</th>
+<td>78.05</td>
+<td>75.29</td>
+<td>68.80</td>
+<td>78.89</td>
+</tr>
+<tr>
+<th style="
+    align: center;
+">Summary</th>
+<td>71.10</td>
+<td>72.18</td>
+<td>69.65</td>
+<td>74.24</td>
+</tr>      </tbody> </table>
 
 <p align="center">
 Table 1: Summary of results obtained in the supervised binary classification task using two different network architectures. Initial refers to the results obtained by training the network on the initial dataset and augmented refers to the results obtained by training the network on the augmented dataset. The results show a marked improvement in accuracy and recall post augmentation on both network architectures without a significant reduction in precision.
