@@ -30,6 +30,8 @@ Malignant (Positive class): 1449 images
 In the training phase, we treated all images with transformations to augment our data by performing random resized crop and lateral inversions with a 50% probability. 
 
 In addition to the above all images were normalized using the channel-wise mean and standard deviation values computed on the ImageNet dataset. 
+
+
 ____
 
 # Supervised Learning
@@ -134,6 +136,49 @@ Fig 8. Images sampled from VAE. The top two belong to the benign and bottom two 
 _____
 
 # Evaluation
+
+<table class="rich-diff-level-zero"> <tbody class="rich-diff-level-one">
+<tr>
+  <th></th>    
+  <th colspan="2"> AlexNet </th>
+  <th colspan="2"> DenseNet </th>
+</tr><tr style="text-align:center"> 
+  <th  style="width: 150px;">Metric</th>
+  <th style="width: 150px;">Initial</th>
+  <th  style="width: 150px;">Augmented</th>
+<th style="width: 150px;"> Initial</th>
+<th style="width: 150px;"> Augmented </th> </tr> 
+<tr style="text-align:center"> 
+<th>Accuracy</th>
+<td>68.83</td>
+<td>71.48</td>
+<td>70.53</td>
+<td>73.11</td>
+</tr>
+<tr style="text-align:center"> 
+<th>Precision</th>
+<td style="
+">65.30</td>
+<td>69.31</td>
+<td>70.50</td>
+<td>70.12</td>
+</tr>
+<tr style="text-align:center"> 
+<th>Recall</th>
+<td>78.05</td>
+<td>75.29</td>
+<td>68.80</td>
+<td>78.89</td>
+</tr>
+<tr style="text-align:center"> 
+<th style="
+    align: center;
+">F1-Score</th>
+<td>71.10</td>
+<td>72.18</td>
+<td>69.65</td>
+<td>74.24</td>
+</tr>      </tbody> </table>
 
 <p align="center">
 Table 1: Summary of results obtained in the supervised binary classification task using two different network architectures. Initial refers to the results obtained by training the network on the initial dataset and augmented refers to the results obtained by training the network on the augmented dataset. The results show a marked improvement in accuracy and recall post augmentation on both network architectures without a significant reduction in precision.
