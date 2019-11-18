@@ -30,6 +30,7 @@ Malignant (Positive class): 1449 images
 In the training phase, we treated all images with transformations to augment our data by performing random resized crop and lateral inversions with a 50% probability. 
 
 In addition to the above all images were normalized using the channel-wise mean and standard deviation values computed on the ImageNet dataset. 
+
 ____
 
 # Supervised Learning
@@ -134,6 +135,13 @@ Fig 8. Images sampled from VAE. The top two belong to the benign and bottom two 
 _____
 
 # Evaluation
+
+| Metrics | Initial | Augmented | Initial | Augmented |
+ |---------|---------|-----------|---------|-----------|
+ | Accuracy | 68.83 | 71.48 | 70.53 | 73.11  |
+ | Precision | 65.30 | 69.31 | 70.50 | 70.12 |
+ | Recall | 78.05 | 75.29 | 68.80 | 78.89 |
+ | Summary | 71.10 | 72.18 | 69.65 | 74.24 |
 
 <p align="center">
 Table 1: Summary of results obtained in the supervised binary classification task using two different network architectures. Initial refers to the results obtained by training the network on the initial dataset and augmented refers to the results obtained by training the network on the augmented dataset. The results show a marked improvement in accuracy and recall post augmentation on both network architectures without a significant reduction in precision.
